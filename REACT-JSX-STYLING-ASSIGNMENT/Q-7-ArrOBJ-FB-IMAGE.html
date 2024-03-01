@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+     
+     var students= [
+     {
+        fullname:'karim',
+        age:23,
+        place:'Ap',
+        gender:'male',
+        paid:25000
+     },
+      {
+        fullname:'sravan',
+        age:13,
+        place:'telangana',
+        gender:'male',
+        paid:10000
+      },
+      {
+        fullname:'nani',
+        age:21,
+        place:'Ap',
+        gender:'male',
+        paid:20000
+      },
+      {
+        fullname:'kira',
+        age:40,
+        place:'telangana',
+        gender:'female',
+        paid:32000
+      },
+     {
+        fullname:'manasa',
+        age:15,
+        place:'gujarat',
+        gender:'female',
+        paid:38000
+     },
+    ]
+
+    var jsx=<div style={{display:"flex",flexwrap:"wrap"}}>
+        {
+            students.map(function(s) {
+               return( 
+                <div style={s.gender==="male"?{backgroundColor:"lightblue"}:{backgroundColor:"pink"}}>
+                <div style={{width:"150px",margin:"2px",border:"1px solid",padding:"10px"}}>
+                 {s.gender==="male"&& <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male4-512.png" style={{width:"100px"}}/>}
+                 {s.gender==="female"&& <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRr5LcBMBnk_8829ptYnpdnG13hgcyUT7GFS0ztG1ioz6eRv3u7_SwNSVRkQdghGsD5Gc&usqp=CAU" style={{width:"100px"}}/>}   
+                    <h4>name:{s.fullname}</h4>
+                    <h4>age:{s.age}</h4>
+                    <h4>place:{s.place}</h4>
+                    <h4>gender:{s.gender}</h4>
+                    <h4>paid:{s.paid}</h4>
+                    
+                </div>
+                </div>
+               )
+            })
+        }
+        </div>
+        ReactDOM.render(jsx,document.getElementById("d1"))
+    </script>
+    </body>
+    </html>
+<!-- Display each array object in flex boxes with respective gender images -->

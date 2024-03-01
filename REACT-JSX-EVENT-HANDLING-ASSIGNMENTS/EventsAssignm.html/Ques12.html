@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <div style="text-align:center;">
+    <img style="width:80px; height:50px"
+    src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3"
+    onmouseover="changeimg1()">
+    <img style="width:80px; height:50px"
+    src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg"
+     onmouseover="changeimg2()">
+     <img style="width:80px; height:50px"
+     src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg" 
+     onmouseover="changeimg3()">
+
+    </div>
+
+    <div style="text-align:center;">
+        <img style="height:200px;" id="display" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3">
+
+    </div>
+
+  <script>
+    var imgs=[
+        "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3",
+        "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg"
+    ];
+     var img =document.getElementById("display")
+     function changeimg1(){
+        img.src=imgs[0]
+     }
+     function changeimg2(){
+        img.src=imgs[1]
+     }
+     function changeimg3(){
+        img.src=imgs[2]
+     }
+
+  </script> 
+   <!-- click on image shows images  --> 
+</body>
+</html> 
+//SIR CODE
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       
+        .a{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img  style="width:100px;height:100px;" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3"  onmouseover="zoom()">
+        <img  style="width:100px;height:100px;" src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg"  onmouseover="zoom1()">
+        <img  style="width:100px;height:100px;" src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg"  onmouseover="zoom2()">
+    </div>
+    <div id="Z">
+
+    </div>
+    <script>
+        
+      function zoom(){
+            var z=document.getElementById("Z")
+            var y=document.createElement("img")
+            y.height=100
+            z.innerHTML=""
+            y.src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3"
+            z.appendChild(y)
+        }
+        function zoom1(){
+            var z=document.getElementById("Z")
+            var y=document.createElement("img")
+            y.height=100
+            z.innerHTML=""
+            y.src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg"
+            z.appendChild(y)
+        }
+        function zoom2(){
+            var z=document.getElementById("Z")
+            var y=document.createElement("img")
+            y.height=100
+            z.innerHTML=""
+            y.src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg"
+            z.appendChild(y)
+        } -->   
+
+     <!-- </script>
+</body>
+</html>  -->
+
+
+//MULTIPLE FUNCTION CODE 

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <label id="1" onclick="abc(1)" style="font-size: 100px; color: blueviolet;">&#9734;</label>
+    <label id="2" onclick="abc(2)" style="font-size: 100px;">&#9734;</label>
+    <label id="3" onclick="abc(3)" style="font-size: 100px;">&#9734;</label>
+    <label id="4" onclick="abc(4)" style="font-size: 100px;">&#9734;</label>
+    <label id="5" onclick="abc(5)" style="font-size: 100px;">&#9734;</label>
+    <h1>Rating:</h1>
+    <span id="a"></span>
+    <script>
+        function abc(e) {
+            for (var i = 1; i <= 5; i++) {
+                if (i <= e) {
+
+
+                    document.getElementById(i).innerHTML = "&#9733";
+                    // document.getElementById(i).style.color="green"
+
+                }
+                else {
+                    document.getElementById(i).innerHTML = "&#9734";
+                    // document.getElementById(i).style.color="red"
+                }
+
+            }
+            document.getElementById("a").innerHTML = e + "/5"
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

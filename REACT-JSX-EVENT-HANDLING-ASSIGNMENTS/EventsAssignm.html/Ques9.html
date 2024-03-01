@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h1 class="a">Change background color of box using buttons</h1>
+    <div class="a">
+    </div>
+        <div id="d1" style="height:100px;width:100px;border:2px solid;background-color: white; border-radius: 5px;">
+    </div>
+    <br>
+    <div>
+        <button id="a1" onclick="abc()" style="background-color:yellow;">ON</button>
+        <button id="a2" onclick="xyz()" style="background-color:yellow;">OFF</button>
+    </div>
+   <script>
+    var x=document.getElementById("a1")
+    var y=document.getElementById("a2")
+    var d=document.getElementById("d1")
+    function abc(){
+     x.style.backgroundColor="red"
+     d.style.backgroundColor="yellow"
+     y.style.backgroundColor="green"
+    }
+    function xyz(){
+     x.style.backgroundColor="green"
+     d.style.backgroundColor=""
+     y.style.backgroundColor="red"
+    }
+
+   </script> 
+   <!-- change div background by using 2 buttons -->
+</body>
+</html>

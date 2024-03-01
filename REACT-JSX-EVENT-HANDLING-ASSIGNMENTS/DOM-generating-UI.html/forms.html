@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <form name="studentForm" onsubmit="addstudent(event)">
+        <input type="text" name="fullname" id="b1" placeholder="Enter ur name">
+        <br/>
+        <br/>
+        <input type="text" name="age" id="b2" placeholder="Enter ur age">
+        <br/><br/>
+        <input type="text" name="city" id="b3" placeholder="Enter ur city">
+        <br/><br/>
+        <button>Add Student</button>
+        <!-- <button type="reset">Res</button> -->
+    </form>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>fullname</th>
+                <th>age</th>
+                <th>city</th>
+            </tr>
+        </thead> 
+        <tbody id="d1">
+
+        </tbody>   
+    </table>
+   <script>
+    var students=[];
+   function addstudent(e){
+    e.preventDefault();
+    // console.log(document.getElementById("b1").value)
+    //         //    (OR)
+    // console.log(document.studentForm.fullname.value)
+    // console.log(document.studentForm.value)//undefined
+    // console.dir(document.studentForm)//obj prints
+
+    var obj1={
+        fullname:"",
+        age:"",
+        city:""
+    }
+    obj1.fullname=document.studentForm.fullname.value
+    obj1.fullname=document.studentForm.age.value
+    obj1.fullname=document.studentForm.city.value
+    console.log(obj1)
+    document.studentForm.reset()
+   }
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <!-- <div style="height:100px;width:100px;border:2px solid" id="a1" onclick="abc()"></div> -->
+    <button style="height:100px;width:100px;border:2px solid" id="a1" onclick="abc()">on</button>
+   <script>
+      var x=document.getElementById("a1")
+      function abc(){
+        if(x.innerHTML==="on"){
+            x.innerHTML="off"
+        }
+       else if(x.innerHTML==="off"){
+            x.innerHTML="on"
+        }
+      }
+
+   </script> 
+   <!-- on off on click on div -->
+</body>
+</html>

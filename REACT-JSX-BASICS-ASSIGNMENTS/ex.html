@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- <h1 onclick="abc()">EDUPOLY</h1> -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        function abc(e){
+            // alert("hi")
+            console.log(e)
+        }
+
+
+        // var jh1=<h1 onClick={()=> {abc()}}>EDUPOLY</h1>
+        // ReactDOM.render(jh1,document.getElementById("d1"))
+
+// console event object on button click
+
+         var jsx=<button onClick={(event)=>abc(event)}> see here</button>
+         ReactDOM.render(jsx,document.getElementById("d1"))
+
+
+
+         var arr=["hello","hai","jeyy","hey"]
+         var jsx=<div>
+            {
+                
+            }
+            </div>
+
+        
+
+    </script>
+</body>
+</html>

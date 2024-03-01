@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <span class="bi bi-star-fill"></span><br>
+
+    <span class="star bi bi-star" onclick="rate(event)"></span>
+    <span class="star bi bi-star" onclick="rate(event)"></span>
+    <span class="star bi bi-star" onclick="rate(event)"></span>
+    <span class="star bi bi-star" onclick="rate(event)"></span>
+    <span class="star bi bi-star" onclick="rate(event)"></span>
+
+    <button onclick="reset()">Reset</button>
+
+   <script>
+       var stars=document.getElementsByClassName("star")
+       addId();
+       function addId(){
+        for(var i=0;i<=stars.length-1;i++){
+            stars[i].id=i
+        }
+       }
+       function rate(e){
+        reset();
+        for(var i=0;i<=e.target.id;i++){
+            stars[i].classList.remove("bi-star")
+            stars[i].classList.add("bi-star-fill")
+        }
+       }
+       function reset(){
+        for(var i=0;i<=stars.length-1;i++){
+            stars[i].classList.remove("bi-star-fill");
+            stars[i].classList.add("bi-star")
+        }
+       }
+   </script> 
+</body>
+</html>

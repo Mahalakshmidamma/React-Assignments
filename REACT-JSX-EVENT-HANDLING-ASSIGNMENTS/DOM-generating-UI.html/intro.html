@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Firstname:</label>
+        <input type="text" id="fn">
+    </div><br>
+    <div>
+        <label>Lastname:</label>
+        <input type="text" id="ln">
+    </div><br>
+    <div>
+        <label>Age:</label>
+        <input type="text" id="ag">
+    </div><br>
+    <div>
+        <label>City:</label>
+        <input type="text" id="cy">
+    </div><br>
+
+    <button onclick="add()">Add Here</button><br><br>
+    <table border="3">
+        <tr>
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>City</th>
+        </thead>
+           </tr>
+           <tbody id="tb">
+
+           </tbody>
+    </table>
+    <script>
+        var firstname=document.getElementById("fn")
+        var lastname=document.getElementById("ln")
+        var age=document.getElementById("ag")
+        var city=document.getElementById("cy")
+
+        var tb=document.getElementById("tb")
+
+        var people=[];
+
+        function add(){
+            tb.innerHTML="";
+        
+        var personobj={
+            firstName:firstname.value,
+            lastName:lastname.value,
+            age:age.value,
+            city:city.value
+        }  
+        people.push(personobj) 
+
+        people.forEach(function(person){
+          var newtr=document.createElement("tr") 
+          
+          var td1=document.createElement("td")
+          td1.innerHTML=person.firstname
+          newtr.appendChild(td1)
+
+          var td2=document.createElement("td")
+          td2.innerHTML=person.lastname
+          newtr.appendChild(td2)
+
+          var td3=document.createElement("td")
+          td3.innerHTML=person.age
+          newtr.appendChild(td3)
+
+          var td4=document.createElement("td")
+          td4.innerHTML=person.city
+          newtr.appendChild(td4)
+
+          
+         tb.appendChild(newtr)
+        })
+    }
+
+    
+
+
+
+      
+
+    </script>
+
+</body>
+</html>

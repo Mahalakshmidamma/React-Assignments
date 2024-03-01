@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            #size {
+                text-align: center;
+            }
+    
+            .b {
+                height: 100px;
+                width: 100px;
+            }
+            #Z {
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head> 
+ <body>
+<div id="size">
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3" class="b" onmouseover="zoom(event)">
+    <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg" class="b" onmouseover="zoom(event)">
+    <img src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg" class="b" onmouseover="zoom(event)">
+</div>
+<div id="Z">
+
+</div>
+<script>
+    var z = document.getElementById("Z")
+    function zoom(event) {
+
+        // console.log(event)
+        // console.dir(event)
+
+        z.innerHTML = ""
+        var y = document.createElement("img")
+        // y.src = ""
+        y.src = event.target.src
+        y.height=150
+        y.width=150
+        z.appendChild(y)
+    }
+    //SINGLE FUNCTION CODE
+    </script>
+    </body>
+    </html>
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head></head>
+    <body>
+        <div style="text-align:center;">
+            <img style="width:80px; height:50px"
+            src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1706787425~exp=1706788025~hmac=94fe6153d01005992ee2b97da6b99fdba6bc3f6f8f0acfc5330f8a6268c9e3b3"
+            onmouseover="changeimg(event)">
+            <img style="width:80px; height:50px"
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_538/https://blog.snappa.com/wp-content/uploads/2022/02/Reshot-example-image.jpg"
+             onmouseover="changeimg(event)">
+             <img style="width:80px; height:50px"
+             src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_1280.jpg" 
+             onmouseover="changeimg(event)">
+            </div>
+ 
+             <div style="text-align:center;">
+                <img style="height:100px;" id="pic" src="">
+
+            </div>//73 & 75 are for emptying image at starting
+
+       <script>
+        var pic=document.getElementById("pic")
+        // pic.style.display="none"
+        function changeimg(e){
+            // pic.style.display="inline-block"
+
+            pic.src=e.target.src
+        }//SINGLE FUNCTION CODE IN SIMPLE CODE
+       </script> 
+    </body>
+    </html>

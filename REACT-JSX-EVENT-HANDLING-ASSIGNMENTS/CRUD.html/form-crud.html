@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  
+        <label>Firstname:</label>
+        <input type="text" id="fn">
+  <br><br>                       
+        <label>Lastname:</label>
+        <input type="text" id="ln">
+  <br><br>  
+        <label>Age:</label>
+        <input type="text" id="ag">
+  <br><br> 
+        <label>City:</label>
+        <input type="text" id="ct">
+  <br><br>
+        <button onclick="add()" id="b1">Add person</button>
+        <button onclick="up()" id="b2">Update</button>
+  <br><br> 
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbd"> </tbody>       
+    </table>
+    <script>
+        var tablebody=document.getElementById("tbd");
+        var fname=document.getElementById("fn")
+        var lname=document.getElementById("ln")
+        var age=document.getElementById("ag")
+        var city=document.getElementById("ct")
+
+        var b1=document.getElementById('b1')
+        var b2=document.getElementById("b2")
+
+        var ar=[];
+
+        b2.style.display="none";
+        var updatedpeople;
+        function add(){
+            var obj={
+                firstname:fname.value,
+                lastname:lname.value,
+                age:age.value,
+                city:city.value,
+            }
+            ar.push(obj)
+            createTable(ar)
+        }
+
+        function up(){
+            var persons={
+                firstname:fname.value,
+                lastname:lname.value,
+                age:age.value,
+                city:city.value,
+            }
+            ar[updatedpeople]=persons
+            createTable(ar)
+            b1.style.display="inline-block"
+            b2.style.display="none";
+        }
+
+        function createTable(arr){
+          tablebody.innerHTML=""
+          arr.forEach(function(a,ind){
+
+
+            var newtr=document.createElement("tr")
+
+            var td1=document.createElement("td")
+            td1.innerHTML=a.firstname
+            newtr.appendChild(td1)
+
+            var td2=document.createElement("td")
+            td2.innerHTML=a.lastname
+            newtr.appendChild(td2)
+
+            var td3=document.createElement("td")
+            td3.innerHTML=a.age
+            newtr.appendChild(td3)
+
+            var td4=document.createElement("td")
+            td4.innerHTML=a.city
+            newtr.appendChild(td4)
+
+            var td5=document.createElement("td")
+            var delbtn=document.createElement("button")
+            delbtn.innerHTML="delete"
+            delbtn.onclick=function(){
+             arr.splice(ind,1);
+             createTable(arr)  
+            }
+            var editbtn=document.createElement("button")
+            editbtn.innerHTML="edit"
+            editbtn.onclick=function(){
+                fname.value=a.firstname
+                lname.value=a.lastname
+                age.value=a.age
+                city.value=a.city;
+
+                b1.style.display="none"
+                b2.style.display="inline-block";
+
+                updatedpeople=ind;
+        
+            }
+
+            td5.appendChild(delbtn)
+            td5.appendChild(editbtn)
+            newtr.appendChild(td5)
+            
+
+            tablebody.appendChild(newtr)
+
+          
+          })
+        }
+    
+    </script>
+
+    
+</body>
+</html>

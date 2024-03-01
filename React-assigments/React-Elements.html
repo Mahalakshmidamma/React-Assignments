@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1 style="color:red">This is Edupoly</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div Classname="datas"></div>
+    <div id="d5"></div>
+   <script type="text/babel">
+     var nh1=document.createElement("h1")
+     nh1.innerHTML="This is Edupoly"
+     nh1.style.color="blue"
+     document.getElementById("d1").appendChild(nh1)
+
+    //  ____________________________________________________
+
+    //  var rh1=React.createElement("h1",null,"This is Edupoly")
+    var rh1=React.createElement("h1",{style:{color:"green"}},"This is Edupoly")
+     ReactDOM.render(rh1,document.getElementById("d2"))
+
+    //  _____________________________________________________
+
+    //  var jh1=<h1>This is Edupoly</h1>
+     var jh1=<h1 style={{color:"yellow"}}>This is Edupoly</h1>
+     ReactDOM.render(jh1,document.getElementById("d3"))
+
+    //  ________________________________________________________
+
+    var arr=["hello","welcome","to","edupoly"]
+    var jsh1=<ul>
+        {
+            arr.map(function(a) {
+                return (
+                    <li>{a}</li>
+                )
+            })
+        }
+        </ul>
+        ReactDOM.render(jsh1,document.getElementById("d4"));
+
+        // ___________________________________________________
+
+        var employees=[
+            {
+             fullname:"arjun",
+             place:"vizag",
+             gender:"male"
+            },
+            {
+             fullname:"kathik",
+             place:"hyd",
+             gender:"male"
+            },
+            {
+            fullname:"neelima",
+             place:"ap",
+             gender:"female"
+            }
+        ]
+        var data=<table border="2px">
+            {
+                employees.map(function(e) {
+                    return (
+                        <tr>
+                            
+                            <td>{e.fullname}</td>
+                            <td>{e.place}</td>
+                            <td>{e.gender}</td>
+                            
+                        </tr>
+                    )
+                })
+            }
+            </table>
+            ReactDOM.render(data,document.getElementById("d5"))
+
+    
+
+
+     
+        
+        
+
+
+
+    
+
+     console.dir(nh1)
+     console.dir(rh1)
+     console.dir(jh1)
+     console.dir(jsh1)
+     console.dir(data)
+   </script> 
+</body>
+</html>

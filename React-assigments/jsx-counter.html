@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+    //    var js=<h1>{hai}</h1>
+    //    ReactDOM.render(js,document.getElementById('d1'))
+
+    // component: js function which returns jsx 
+    //    function Maha(){
+    //     return <h1>hello World!!</h1>
+    // }
+    // ReactDOM.render(<Maha></Maha>,document.getElementById("d1"))
+
+    // var jsx=<h1>
+    //     <id></id>
+    //     <i></i>
+    //     </h1>
+     
+    // function Vessel(){
+    //     return jsx
+    // }
+    // ReactDOM.render(jsx,document.getElementById("d1"))
+
+
+
+    // COUNTER
+      function Counter(){
+        var[c,setC]=React.useState(0)
+            function inc(){
+                setC(c+1)
+            }
+            
+        function dec(){
+            setC(c-1)
+        }
+      
+      return(
+           <div>
+                 <h1>Counter:{c}</h1>
+                 <button onClick={()=>(inc())}>Increment</button>
+                 <button onClick={()=>(dec())}>Decrement</button>
+    
+        </div>
+      )
+    }
+      
+        ReactDOM.render(<Counter></Counter>,document.getElementById("d1"))
+ 
+    //TODO LIST
+    var todo=["get ready","go out"]
+    function addtodo(){
+        
+    }   
+         
+       
+
+    </script>
+</body>
+</html>

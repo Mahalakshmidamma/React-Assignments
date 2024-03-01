@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+
+        
+//.Q-3:Console event object on button click
+
+          // function abc(e){
+        //     console.log(e)
+        // }
+
+
+        // var jsx=<button onClick={abc}>CLICK HERE</button>
+        // ReactDOM.render(jsx,document.getElementById("d1"))
+
+
+//Q-4: Display the event object for a click on div with 300px width and 200px height with 2px border
+ 
+//      function abc(e){
+//     console.log(e)
+//   }
+//   var jsx = <div style={{width:"300px",height:"200px",border:"2px solid"}} onClick={abc}>hello</div>
+//   ReactDOM.render(jsx,document.getElementById("d1"))
+
+// Q-5:  Display the clientX clientY position for a click on div with 300px width and 200px height with 2px border copy
+       
+    //     function abc(e){
+    //       console.log(e.clientX)
+    //       console.log(e.clientY)
+
+    //     }
+    //    var jsx=<div style={{width:"300px",height:"200px",border:"2px solid"}} onClick={abc}>hello</div>
+    //    ReactDOM.render(jsx,document.getElementById("d1")) 
+
+//Q-6:   Display the text of div on click in console 
+
+    //         function abc(e){
+    //       console.log(e.target.innerHTML)
+          
+
+    //    }
+    //         var jsx=<div style={{width:"100px",height:"50px",border:"2px solid"}}  onClick={abc}>hello</div>
+    //           ReactDOM.render(jsx,document.getElementById("d1")) 
+
+ //Q-7:   Console the id of div on click
+           
+        //   function abc(e){
+        //     console.log(e.target.id)
+        //   }
+        //    var jsx=<div id="myid" style={{width:"100px",height:"50px",border:"2px solid"}} onClick={abc}>Hola welcome to habibi</div>
+        //    ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-8:   Display the text of h1 on click in console  
+           
+            //     function abc(e){
+            //         console.log(e.target.innerHTML)
+            //     }
+            // var jsx=<h1 onClick={abc}>beautiful</h1>
+            // ReactDOM.render(jsx,document.getElementById("d1")) 
+
+ //Q-9:   Console respective button label click
+         
+            //    function abc(e){
+            //         console.log(e)
+            //     }
+            // var jsx=<button onClick={abc}>clickhere</button>
+            // ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-10:   Console text box value on button click
+           
+            //   function abc(){
+            //     console.log(document.getElementById("d2").value)
+            //   }
+            // var jsx=<div>    
+            //             <input type="text" id="d2"/>
+            //             <button onClick={abc}>ADD HERE</button>
+            //     </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-11:    Display text box value in h1 on button click  
+           
+            //     function abc(){
+            //        document.getElementById('d3').innerHTML=document.getElementById('d2').value
+            //     }
+            //   var jsx=<div>    
+            //              <input type="text" id="d2"/>
+            //              <button onClick={abc}>ADD HERE</button>
+            //              <h1 id="d3"></h1>
+            //      </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-12:   Display text box value in uppercase h1 on button click  
+           
+            //   function abc(){
+            //     document.getElementById("h1").innerHTML=document.getElementById("s1").value.toUpperCase()
+            //   }
+
+            //    var jsx=<div>
+                
+            //         <input type="text" id="s1"/>
+            //         <button onClick={abc}>ADD HERE</button>
+            //         <h1 id="h1"></h1>
+            //     </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-13:    Display text box value in uppercase h1 on textbox keyup   
+            
+            //   function abc(){
+            //     document.getElementById("h1").innerHTML=document.getElementById("s1").value.toUpperCase()
+            //   }
+            //  var jsx=<div>
+            //         <input type="text" id="s1" onKeyUp={abc} />
+            //         <h1 id="h1"></h1>
+            //  </div>
+            //  ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-14:  Display text box value in uppercase h1 on textbox blur    
+            
+            //   function abc(){
+            //     document.getElementById("h1").innerHTML=document.getElementById("s1").value.toUpperCase()
+            //   }
+            //   var jsx=<div>
+            //            <input type="text" id="s1" onBlur={abc}/>
+            //             <h1 id="h1"></h1>
+            //          </div>
+            //           ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-15:   Display text box value in h1 on textbox keyup event     
+                
+            //   function abc(){
+            //   document.getElementById("h1").innerHTML=document.getElementById("s1").value
+            //   }
+            // var jsx=<div>
+            //     <input type="text" id="s1" onKeyUp={abc}/>
+            //     <h1 id="h1"></h1>
+            //     </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-16:    Reset the textbox text on a button click  
+  
+            //   function abc(){
+            //         document.getElementById("h1").innerHTML=document.getElementById("s1").value
+            //   }
+            //   function xyz(){
+            //         document.getElementById("s1").value=""
+            //         document.getElementById("h1").innerHTML=""
+            //   }
+            //   var jsx=<div>
+            //       <input type="text" id="s1" onKeyUp={abc}/>
+            //       <button onClick={xyz}> RESET</button>
+            //        <h1 id="h1"></h1>
+            //     </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+         
+  //Q-17:    Display addition of two text box values in h1 on textbox on button click
+                
+                //    function abc(){
+                //    var x = +document.getElementById("n1").value
+                //   var y = +document.getElementById("n2").value
+                //      document.getElementById("dd").innerHTML=x+y
+                //    }
+                // var jsx=<div>
+                //      <input type="text" id="n1"/><br/>
+                //      <input type="text" id="n2"/><br/>
+                //      <br/>
+                //      <button onClick={abc}>ADD</button>
+                //    <h1 id="dd"></h1>
+                // </div>
+                // ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-18:     Display substraction of two text box values in h1 on textbox on button click
+
+    //             function abc(){
+    //     var x = document.getElementById('n1').value;
+    //     var y = document.getElementById('n2').value;
+    //     document.getElementById("dd").innerHTML=x-y
+    //   }
+    //   var jh1 = <div>
+    //               <input type="text" id='n1'/><br/>
+    //               <input type="text" id='n2'/><br/>
+    //               <br/>
+    //               <button onClick={abc}>Substraction</button>
+    //               <h1 id='dd'></h1>
+    //             </div>
+    //   ReactDOM.render(jh1,document.getElementById("d1"))
+
+  //Q-19:  Display result of two text box values in h1 on textbox on multiplication and division buttons    
+
+    //      function abc(){
+    //          var x = document.getElementById('n1').value;
+    //          var y = document.getElementById('n2').value;
+    //        document.getElementById("dd").innerHTML=x*y
+    //     }
+    //     function xyz(){
+    //          var x = document.getElementById('n1').value;
+    //          var y = document.getElementById('n2').value;
+    //        document.getElementById("dd").innerHTML=x/y
+    //     }
+    //   var jh1 = <div>
+    //               <input type="text" id='n1'/><br/>
+    //               <input type="text" id='n2'/><br/>
+    //               <br/>
+    //               <button onClick={abc}>MUL</button>
+    //               <button onClick={xyz}>DIV</button>
+
+    //               <h1 id='dd'></h1>
+    //             </div>
+    //   ReactDOM.render(jh1,document.getElementById("d1"))
+
+ //Q-20:   Display radio button value on check 
+    
+        //      function abc(e){
+        //         document.getElementById("dd").innerHTML=e.target.value
+        //      }
+        //      function clearText(){
+        //         document.getElementById("dd").innerHTML=""
+        //         document.getElementById("il").value=""
+        //      }
+        //    var jsx=<div>
+        //        <input type="radio" value="india" id="i1" onChange={abc}/>IND
+        //        <input type="radio" value="united states of america" id="i1" onChange={abc}/>USA
+        //        <h1 id="dd"></h1>
+        //     </div>
+        //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-21:   Display respective image on radio button value
+           
+               function abc(e){
+               if(e.target.value==="male"){
+                document.getElementById("dd").src="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg";
+               }else{
+                document.getElementById("dd").src="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png";
+               }
+               }
+          var jsx=<div>
+               <input name="gen" type="radio" value="male" onChange={abc}/>:MALE
+               <input name="gen" type="radio" value="female" onChange={abc}/>:FEMALE
+               <img src="" style={{width:"100px"}} id="dd"/>
+            </div>
+            ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-22:  Display select box value in h1
+      
+            // function xyz(e){
+            //   document.getElementById("dd").innerHTML=e.target.value
+            // }
+            // var jsx=<div>
+            //            <select onChange={xyz}>
+            //               <option value="beech">Goa</option>
+            //               <option value="nature">Kerala</option>
+            //               <option value="dessert">Ladak</option>
+            //               <option value="beechessss">Vizag</option>
+            //               <option value="temple">Varanasi</option>
+            //               <option value="harathi">Kedarnadh</option>
+            //            </select>
+            //            <h1 id="dd"></h1>
+            //     </div>
+            //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+ //Q-23:   Display selected checkbox values in console /body
+               
+        //               var arr =[]
+
+        // function abc(e){
+        //   if(e.target.checked===false){
+
+        //     var i = arr.indexOf(e.target.value);
+        //     arr.splice(i,1);
+        //     document.getElementById("dd").innerHTML=arr;
+
+        //   }
+        //   else{
+        //     arr.push(e.target.value)
+        //     document.getElementById("dd").innerHTML=arr;
+        //   }
+        // }
+        //        var jsx=<div>
+                       
+        //                   <input value="beech" onChange={abc} type="checkbox"/>Goa
+        //                   <input value="nature"  onChange={abc} type="checkbox"/>Kerala
+        //                   <input value="dessert" onChange={abc} type="checkbox"/>Ladak
+        //                   <input value="beechessss" onChange={abc} type="checkbox"/>Vizag
+        //                   <input value="temple" onChange={abc} type="checkbox"/>Varanasi
+        //                   <input value="harathi" onChange={abc} type="checkbox"/>Kedarnadh
+        //                   <input value="harathi" onChange={abc} type="checkbox"/>Turkey
+                      
+        //                <h1 id="dd"></h1>
+        //         </div>
+        //         ReactDOM.render(jsx,document.getElementById("d1"))
+
+  //Q-24:    Display the selected day in h1  
+             
+                //    function abc(){
+                //     document.getElementById('h1').innerHTML=document.getElementById("dd").value
+                //    }
+                //  var jsx=<div>
+                //     <input type="date" id="dd" onChange={abc}/>
+                //     <h1 id="h1"></h1>
+                //     </div>
+                //     ReactDOM.render(jsx,document.getElementById("d1"))
+
+   // Q-25:   Bindevent handler with arguments 
+              //      function abc(z){
+              //       document.getElementById("h1").innerHTML=z
+              //      }        
+              //  var jsx=<div>
+              //       <button onClick={()=>{abc(0)}}>button1</button>
+              //       <button onClick={()=>{abc(10)}}>button2</button>
+              //       <button onClick={()=>{abc(999)}}>button3</button>
+              //       <button onClick={()=>{abc(10000)}}>button4</button>
+              //       <h1 id="h1"></h1>
+              //       </div>
+              //       ReactDOM.render(jsx,document.getElementById("d1"))
+
+   //Q-26:   Bindevent handler with arguments as index for list item genereted from array 
+          
+            //          function abc(i){
+            //            alert("i")
+            //          }   
+            //     var arr=["hi","hello","hey","hola","haha"];
+            //  var jsx=<div>{
+            //                   arr.map(function(a,i) {
+            //                      return (
+            //                         <li onClick={()=>{abc(i)}}>{a}</li>
+            //                      )
+            //                   })
+            //               }   
+            //         </div>
+            //         ReactDOM.render(jsx,document.getElementById("d1"))
+
+
+
+              
+              
+             
+            
+
+
+    </script>
+    
+</body>
+</html>

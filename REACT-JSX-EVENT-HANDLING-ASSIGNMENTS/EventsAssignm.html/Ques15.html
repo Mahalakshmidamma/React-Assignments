@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <h1 style="color: red;">ADD STUDENTS</h1>
+    <input type="text" id="a1">
+    <button onclick="abc()" style="background-color: yellowgreen;">add students</button>
+    <ul id="u1">
+
+    </ul>
+   
+   <script>
+      var a=document.getElementById("a1")
+      var b=document.getElementById("u1")
+
+      var arr=[];
+    
+      function abc(){
+        b.innerHTML=""
+        arr.push(a.value)
+
+        arr.forEach(function(ar){
+         var li=document.createElement("li")
+         li.innerHTML=ar
+         b.appendChild(li)
+        })
+      }
+      //add names - list forms
+   </script> 
+</body>
+</html>

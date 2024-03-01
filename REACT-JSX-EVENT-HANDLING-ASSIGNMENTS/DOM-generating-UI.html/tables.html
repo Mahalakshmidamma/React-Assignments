@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <lable>person</lable>
+    <input type="text" id="a1"><br/><br/>
+    <lable>age</lable>
+    <input type="text" id="a2"><br/><br/>
+    <button onclick="ADD()">ADD</button><br/><br/>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>person</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+  <script>
+    var pn=document.getElementById("a1")
+    var pa=document.getElementById("a2")
+    var tb=document.getElementById("tb")
+
+    var people=[];
+
+    function ADD(){
+      tb.innerHTML="";
+
+      var personobj={
+        personname:pn.value,
+        personage:pa.value
+      }
+
+      people.push(personobj)
+      people.forEach(function(person){
+      var tr=document.createElement("tr")
+
+      var td1=document.createElement("td")
+      td1.innerHTML=person.personname
+      tr.appendChild(td1)
+
+      var td2=document.createElement("td")
+      td2.innerHTML=person.personage
+      tr.appendChild(td2)
+
+      tb.appendChild(tr)
+
+      })
+    }
+
+
+//     genTable(people)
+  
+
+//  //--------another:generation table------------
+//       function genTable(arr){
+
+//      arr.people.forEach(function(person){
+//       var tr=document.createElement("tr")
+
+//       var td1=document.createElement("td")
+//       td1.innerHTML=person.personname
+//       tr.appendChild(td1)
+
+//       var td2=document.createElement("td")
+//       td2.innerHTML=person.personage
+//       tr.appendChild(td2)
+
+//       tb.appendChild(tr)
+
+//       })
+//     }
+
+//-----screenshot on mobile with red mark------------
+  </script>  
+</body>
+</html>

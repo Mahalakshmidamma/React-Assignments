@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1 style="text-align: center;color: brown;">bulb on/off using toggle button</h1>
+   <center><img style="height:100px;width:100px" id="i1" src="https://media.istockphoto.com/id/185099361/photo/light-bulb.jpg?b=1&s=612x612&w=0&k=20&c=iac5-6m0iUDWphkkMexbm3WXHaGtuq9_EZI1OnURXpM="></center>
+   <div>
+   <button style="border:2px solid;background-color: yellow; text-align: center; " id="a1" onclick="abc()">ON</button>
+  </div> 
+   <script>
+    var x=document.getElementById("a1")
+    var i=document.getElementById("i1")
+    function abc(){
+        if(x.innerHTML==="ON"){
+             i.src="https://cdn.pixabay.com/photo/2013/07/12/14/34/light-148483_1280.png"
+            x.innerHTML="OFF"
+        }
+       else{
+            i.src="https://media.istockphoto.com/id/185099361/photo/light-bulb.jpg?b=1&s=612x612&w=0&k=20&c=iac5-6m0iUDWphkkMexbm3WXHaGtuq9_EZI1OnURXpM="
+            x.innerHTML="ON"
+        }
+      }
+    
+      
+   </script> 
+   show on/off bulb image using toggle form 
+ </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+

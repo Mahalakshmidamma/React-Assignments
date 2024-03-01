@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+        var arr=[10,12,33,44,55,66,77]
+        var jsx=<div>
+            {
+                arr.map(function(a) {
+                    return(
+                        <li style={a%2==0?{color:"green"}:{color:"red"}}>{a}</li>
+                    )
+                })
+            }
+            </div>
+        
+    
+        ReactDOM.render(jsx,document.getElementById("d1"))
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- Display even array value in green and odd in red list items -->

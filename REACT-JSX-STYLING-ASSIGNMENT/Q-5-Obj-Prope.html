@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="dd"></div>
+    <script type="text/babel">
+        var obj= {
+        firstname:"Maha",
+        lastname:"lakshmi",
+        gender:"female",
+        age:20
+      }
+
+        var jsx=<div>
+            
+             <h1>{obj.firstname}</h1>//maha
+                <h1>gender:{obj.gender}</h1>//gender:female
+            
+            </div>
+            ReactDOM.render(jsx,document.getElementById("dd"))
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- Object.keys(obj[])---keys print -->
+
+<!-- Display each object properties -->

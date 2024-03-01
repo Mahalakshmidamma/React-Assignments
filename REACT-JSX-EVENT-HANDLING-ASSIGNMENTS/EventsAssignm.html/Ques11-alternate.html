@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body style="text-align: center;">
+    <h1>show bulb on off using toggle button</h1>
+    <div>
+        <img id="i1" src="https://media.istockphoto.com/id/185099361/photo/light-bulb.jpg?b=1&s=612x612&w=0&k=20&c=iac5-6m0iUDWphkkMexbm3WXHaGtuq9_EZI1OnURXpM=">
+        <img id="i2" src="https://cdn.pixabay.com/photo/2013/07/12/14/34/light-148483_1280.png">
+    </div>
+    <div style="text-align: center;">
+        <button onclick="abc()" id="b1" style="padding: 10px; background-color: orange; margin-top: 10px;" >ON</button>
+    </div>
+    <script>
+        var off=document.getElementById("i1")
+        var on=document.getElementById("i2")
+        var btn=document.getElementById("b1")
+        on.style.display="none"
+
+        var clicked=true
+        function abc(){
+            if(clicked){
+                on.style.display="inline-block"
+                off.style.display="none"
+                clicked=!clicked
+                btn.innerHTML="off"
+
+            }
+            else{
+                on.style.display="none"
+                off.style.display="inline-block"
+                clicked=!clicked
+                btn.innerHTML="on"
+
+            }
+        }
+
+    </script>
+</body>
+</html>

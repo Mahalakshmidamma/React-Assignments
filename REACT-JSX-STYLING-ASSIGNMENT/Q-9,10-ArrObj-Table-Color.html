@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <script type="text/babel">
+     
+     var students= [
+     {
+        fullname:'karim',
+        age:23,
+        place:'Ap',
+        gender:'male',
+        paid:25000
+     },
+      {
+        fullname:'sravan',
+        age:13,
+        place:'telangana',
+        gender:'male',
+        paid:10000
+      },
+      {
+        fullname:'nani',
+        age:21,
+        place:'Ap',
+        gender:'male',
+        paid:20000
+      },
+      {
+        fullname:'kira',
+        age:40,
+        place:'telangana',
+        gender:'female',
+        paid:32000
+      },
+     {
+        fullname:'manasa',
+        age:15,
+        place:'gujarat',
+        gender:'female',
+        paid:38000
+     },
+    ]
+    var jsx=<table border="2px">
+        {
+           students.map(function(s) {
+            return (
+                <tr style={s.gender==="female"?{backgroundColor:"pink"}:{backgroundColor:"blue"}}>
+                    <td>{s.fullname}</td>
+                    <td>{s.age}</td>
+                    <td>{s.place}</td>
+                    <td>{s.gender}</td>
+                    <td>{s.paid}</td>
+                 </tr>
+            )
+           })
+        } 
+        </table>
+        ReactDOM.render(jsx,document.getElementById("d1"))
+    </script>
+    </body>
+</html>
+
+
+
+<!-- Display array of objects in table with female students row in pink --Q-9-->
+
+<!-- Display array of objects in table with female students row in pink
+male in blue----------Q-10 -->
